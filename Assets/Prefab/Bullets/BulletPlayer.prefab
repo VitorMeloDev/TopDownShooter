@@ -149,7 +149,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   vel: 4
   myRB: {fileID: 4300339472481882413}
   dano: 1
-  impact: {fileID: 0}
+  explosion: {fileID: 7630026242603923251, guid: 7d1b99105e69dea479268f67b0f26a0c, type: 3}
 --- !u!114 &5103205464313077082
 MonoBehaviour:
   m_ObjectHideFlags: 0

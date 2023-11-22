@@ -184,7 +184,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -223,17 +223,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 755233569183931610, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 8400329510773932830, guid: 761e24cbca41ff34b9d3b7632920a7e2, type: 3}
     - target: {fileID: 1794509538106955647, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1794509538106955647, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1794509538106955647, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -267,42 +263,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3252598854968074178, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.42261827
-      objectReference: {fileID: 0}
-    - target: {fileID: 3252598854968074178, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3252598854968074178, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.9063079
-      objectReference: {fileID: 0}
-    - target: {fileID: 3252598854968074178, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 230
-      objectReference: {fileID: 0}
     - target: {fileID: 6139078768539498218, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
-    - target: {fileID: 8226335699027413491, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.4226182
-      objectReference: {fileID: 0}
-    - target: {fileID: 8226335699027413491, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8226335699027413491, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.9063078
-      objectReference: {fileID: 0}
-    - target: {fileID: 8226335699027413491, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -230
-      objectReference: {fileID: 0}
+    - target: {fileID: 7730454396928522229, guid: a032387b78301f945ba2650ec360b7f4, type: 3}
+      propertyPath: bigExplosion
+      value: 
+      objectReference: {fileID: 4950307946393847438, guid: 4a05e8a862cd01d4b92f9f67059533ed, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
