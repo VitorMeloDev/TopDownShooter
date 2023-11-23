@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
-    public float rotationSpeed = 3.0f;
-    public float xLimits;
-    public float yLimits;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float xLimits;
+    [SerializeField] private float yLimits;
     private Rigidbody2D rb;
 
-    
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

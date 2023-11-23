@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-    public Transform[] bulletsOut;
-    public GameObject bullet;
+    [SerializeField] private Transform[] bulletsOut;
+    [SerializeField] private GameObject bullet;
     bool canShoot = true;
     
     // Update is called once per frame

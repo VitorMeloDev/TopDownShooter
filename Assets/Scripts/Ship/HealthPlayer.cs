@@ -4,13 +4,8 @@ using System.Diagnostics;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class HealthPlayer : Health
 {
-    public int life;
-    public GameObject bigExplosion;
-    public Sprite[] spritesShip;
-    public SpriteRenderer srShip;
-
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +15,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void LifeDecrement()
+    public override void LifeDecrement()
     {
         life--;
         switch (life)
@@ -37,11 +32,11 @@ public class Health : MonoBehaviour
                 srShip.sprite = spritesShip[1];
             break;
         }
-        
+
         if(life <= 0){ Dead();}
     }
 
-    public void Dead()
+    public override void Dead()
     {
         Instantiate(bigExplosion, transform.position, Quaternion.identity);
     }

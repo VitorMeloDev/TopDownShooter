@@ -18,6 +18,7 @@ public class BulletPlayer : Bullet
     {
         if(other.gameObject.CompareTag("Enemy"))
         {
+            other.gameObject.GetComponent<HealthEnemy>().LifeDecrement();
             Instantiate(explosion,transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
