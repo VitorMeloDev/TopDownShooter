@@ -29,5 +29,6 @@ public class HealthEnemy : Health
     public override void Dead()
     {
         Instantiate(bigExplosion, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletPlayer : Bullet
+public class BulletEnemy : Bullet
 {
     void FixedUpdate()
     {
@@ -16,17 +16,16 @@ public class BulletPlayer : Bullet
 
     public void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Enemy"))
+        if(other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<HealthEnemy>().LifeDecrement();
+            other.gameObject.GetComponent<HealthPlayer>().LifeDecrement();
             Instantiate(explosion,transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
 
-        if(other.gameObject.CompareTag("Bullet"))
-        {   
+        if(other.gameObject.CompareTag("Enemy"))
+        {
             Instantiate(explosion,transform.position, Quaternion.identity);
-            Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
     }

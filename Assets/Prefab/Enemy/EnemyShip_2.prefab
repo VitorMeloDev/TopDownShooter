@@ -43,9 +43,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9188135042551413545}
   - component: {fileID: 6617254725313928219}
-  - component: {fileID: 249468894096079063}
   - component: {fileID: -4132663540204892372}
+  - component: {fileID: 249468894096079063}
   - component: {fileID: 5630313118440491566}
+  - component: {fileID: -6242209160323336578}
   m_Layer: 6
   m_Name: EnemyShip_2
   m_TagString: Enemy
@@ -105,20 +106,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!114 &249468894096079063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2482276620282460452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95069c90e9d352d4d9915ab61b153270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.8
-  distanceTarget: 0
 --- !u!50 &-4132663540204892372
 Rigidbody2D:
   serializedVersion: 4
@@ -146,6 +133,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &249468894096079063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482276620282460452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95069c90e9d352d4d9915ab61b153270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.8
+  distanceTarget: 0
 --- !u!114 &5630313118440491566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +166,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f95467ef4598db146b90b0d8ead3afef, type: 3}
   - {fileID: 21300000, guid: 98c48439d3ba5634492e3aafbb05960f, type: 3}
   srShip: {fileID: 3243999708082191889}
+--- !u!114 &-6242209160323336578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2482276620282460452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b73d0ee5d99fab4fa0e37a1ae2a0228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 2036180309757043791, guid: 316d9845d35ed494bae3e0370b2ac39f, type: 3}
 --- !u!1 &5006666360228579005
 GameObject:
   m_ObjectHideFlags: 0

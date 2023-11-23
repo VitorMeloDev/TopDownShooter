@@ -15,8 +15,7 @@ public class MoveEnemy : MonoBehaviour
         target = GameObject.FindWithTag("Player");
     }
     
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
     }

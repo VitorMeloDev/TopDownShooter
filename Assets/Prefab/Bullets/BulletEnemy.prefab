@@ -95,10 +95,10 @@ GameObject:
   - component: {fileID: 2681251364376430305}
   - component: {fileID: 2085718233137001629}
   - component: {fileID: 4300339472481882413}
-  - component: {fileID: 6705932262930976190}
+  - component: {fileID: 6720578831875329660}
   - component: {fileID: 5103205464313077082}
   m_Layer: 0
-  m_Name: BulletPlayer
+  m_Name: BulletEnemy
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6705932262930976190
+--- !u!114 &6720578831875329660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,13 +191,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8400329510773932830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f113cdc3cc9b1c94e81bd25c46d13059, type: 3}
+  m_Script: {fileID: 11500000, guid: 305bde47a81a91142b6da563ff900afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 4
   myRB: {fileID: 4300339472481882413}
-  dano: 1
-  explosion: {fileID: 7630026242603923251, guid: 7d1b99105e69dea479268f67b0f26a0c, type: 3}
+  dano: 0
+  explosion: {fileID: 4950307946393847438, guid: 4a05e8a862cd01d4b92f9f67059533ed, type: 3}
 --- !u!114 &5103205464313077082
 MonoBehaviour:
   m_ObjectHideFlags: 0
