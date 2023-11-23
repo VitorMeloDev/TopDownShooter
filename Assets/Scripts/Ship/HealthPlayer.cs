@@ -39,5 +39,6 @@ public class HealthPlayer : Health
     public override void Dead()
     {
         Instantiate(bigExplosion, transform.position, Quaternion.identity);
+        GameManager.instance.GameOver();
     }
 }
