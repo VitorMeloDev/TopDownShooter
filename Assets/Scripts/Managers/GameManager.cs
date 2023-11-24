@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -17,12 +18,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
+        gameOver = false;
+        sessionTime = (float)PlayerPrefs.GetInt("GameSession") * 60;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        sessionTime -= Time.deltaTime;
+        if(sessionTime <= 0) {GameOver();}
     }
 
     public void AddPoints(int add)
@@ -35,6 +39,15 @@ public class GameManager : MonoBehaviour
         gameOver = true;
         gameOverMenu.SetActive(true);
         pointsTxt.text = "SCORE: " + points.ToString();
-        Time.timeScale = 0;
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

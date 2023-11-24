@@ -25,7 +25,7 @@ public class HealthPlayer : Health
                 srShip.sprite = spritesShip[1];
             break;
         }
-
+        lifeTxt.text = life.ToString();
         if(life <= 0){ Dead();}
     }
 
