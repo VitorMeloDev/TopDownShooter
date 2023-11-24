@@ -29,5 +29,11 @@ public class BulletPlayer : Bullet
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
+
+        if(other.gameObject.CompareTag("Rock"))
+        {
+            Instantiate(explosion,transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
     }
 }

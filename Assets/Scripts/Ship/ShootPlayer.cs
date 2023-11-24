@@ -11,31 +11,31 @@ public class Shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Fire1") && canShoot)
-        {
-            FrontalShoot();
-        }
-
-        if(Input.GetButton("Fire2") && canShoot)
-        {
-            TripleShoot();
-        }
+        if(GameManager.instance.gameOver){return;}
+        FrontalShoot();
+        TripleShoot();
     }
 
     public void FrontalShoot()
     {
-        canShoot = false;
-        Instantiate(bullet, bulletsOut[0].position, bulletsOut[0].rotation);
-        StartCoroutine(NoShoot(0.6f));
+        if(Input.GetButton("Fire1") && canShoot)
+        {
+            canShoot = false;
+            Instantiate(bullet, bulletsOut[0].position, bulletsOut[0].rotation);
+            StartCoroutine(NoShoot(0.6f));
+        }
     }
 
     public void TripleShoot()
     {
-        canShoot = false;
-        Instantiate(bullet, bulletsOut[0].position, bulletsOut[0].rotation);
-        Instantiate(bullet, bulletsOut[1].position, bulletsOut[1].rotation);
-        Instantiate(bullet, bulletsOut[2].position, bulletsOut[2].rotation);
-        StartCoroutine(NoShoot(1f));
+        if(Input.GetButton("Fire2") && canShoot)
+        {
+            canShoot = false;
+            Instantiate(bullet, bulletsOut[0].position, bulletsOut[0].rotation);
+            Instantiate(bullet, bulletsOut[1].position, bulletsOut[1].rotation);
+            Instantiate(bullet, bulletsOut[2].position, bulletsOut[2].rotation);
+            StartCoroutine(NoShoot(1f));
+        }
     }
 
     private IEnumerator NoShoot(float time)

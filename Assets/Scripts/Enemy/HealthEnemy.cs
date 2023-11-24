@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class HealthEnemy : Health
 {
-    void Update()
-    {
-        
-    }
-
     public override void LifeDecrement()
     {
+        if(GameManager.instance.gameOver){return;}
+
         life--;
         switch (life)
         {

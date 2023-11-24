@@ -17,6 +17,7 @@ public class MoveEnemy : MonoBehaviour
     
     void FixedUpdate()
     {
+        if(GameManager.instance.gameOver){return;}
         Move();
     }
 

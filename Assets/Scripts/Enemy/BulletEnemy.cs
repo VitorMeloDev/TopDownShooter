@@ -6,6 +6,7 @@ public class BulletEnemy : Bullet
 {
     void FixedUpdate()
     {
+        if(GameManager.instance.gameOver){return;}
         Move();
     }
 
@@ -24,6 +25,12 @@ public class BulletEnemy : Bullet
         }
 
         if(other.gameObject.CompareTag("Enemy"))
+        {
+            Instantiate(explosion,transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
+
+        if(other.gameObject.CompareTag("Rock"))
         {
             Instantiate(explosion,transform.position, Quaternion.identity);
             Destroy(this.gameObject);

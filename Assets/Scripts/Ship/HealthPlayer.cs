@@ -6,17 +6,10 @@ using UnityEngine;
 
 public class HealthPlayer : Health
 {
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetButtonDown("Jump"))
-        {
-            LifeDecrement();
-        }
-    }
-
     public override void LifeDecrement()
     {
+        if(GameManager.instance.gameOver){return;}
+
         life--;
         switch (life)
         {

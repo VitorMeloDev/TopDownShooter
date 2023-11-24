@@ -18,6 +18,8 @@ public class ShootEnemy : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.instance.gameOver){return;}
+
         if(moveEnemy.distanceTarget < distanceToShoot && canShoot)
         {
             FrontalShoot();

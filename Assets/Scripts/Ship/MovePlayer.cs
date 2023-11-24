@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class MovePlayer : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotationSpeed;
@@ -17,6 +17,12 @@ public class Move : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
+    {
+        if(GameManager.instance.gameOver){return;}
+        Move();
+    }
+
+    void Move()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
 
